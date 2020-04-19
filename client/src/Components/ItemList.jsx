@@ -26,7 +26,7 @@ export default class ItemList extends Component {
     render() {
         return (
             <div>
-                {/* <h1>This is a Form</h1> */}
+                <h1>Items for sale</h1>
                 {this.state.itemArray.map((items,index)=>{
                     return <div key ={items._id}>
                         <Link to ={`/info/${items._id}`} id = {items._id}>{items.itemName}</Link>

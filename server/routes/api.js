@@ -59,9 +59,9 @@ router.delete('/:_id',(req,res)=>{
 
 })
 
-router.put('/:itemName',(req,res)=>{
+router.put('/:_id',(req,res)=>{
     // res.send('Update an Item');
-    itemCollection.findOneAndUpdate({itemName:req.params.itemName},req.body,(errors,results)=>{
+    itemCollection.findOneAndUpdate({_id:req.params._id},req.body,(errors,results)=>{
         if(errors){
             res.send(errors)
         }
